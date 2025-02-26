@@ -1,0 +1,52 @@
+<!-- <template>
+    <div>Hello World</div>
+    <h1>{userName}</h1>
+    <h1>{userRoleName}</h1>
+    <h1>{userProfileName}</h1>
+</template> -->
+
+<template>
+  <div class="profile-container">
+      <div class="profile-card">
+          <lightning-tabset variant="scoped">
+              <lightning-tab label="Personal Info">
+                  <div class="tab-content">
+                      <lightning-accordion allow-multiple-sections-open>
+                          <lightning-accordion-section name="basicInfo" label="Basic Details">
+                              <div class="info-grid">
+                                  <div class="info-item"><span>Email:</span> {email}</div>
+                                  <div class="info-item"><span>Phone:</span> {phone}</div>
+                                  <div class="info-item"><span>DOB:</span> {dob}</div>
+                                  <div class="info-item"><span>SSN:</span> {ssn}</div>
+                                  <div class="info-item"><span>Credit Score:</span> {creditScore}</div>
+                              </div>
+                          </lightning-accordion-section>
+                      </lightning-accordion>
+                  </div>
+              </lightning-tab>
+
+              <lightning-tab label="Military Info">
+                  <div class="tab-content">
+                      <lightning-accordion allow-multiple-sections-open>
+                          <lightning-accordion-section name="militaryInfo" label="Military Service">
+                              <div class="info-grid">
+                                  <div class="info-item"><span>Branch:</span> {militaryBranch}</div>
+                                  <div class="info-item"><span>Discharge Percentage:</span> {disabilityPercentage}</div>
+                                  <div class="info-item"><span>Start Date:</span> {militaryStartDate}</div>
+                                  <div class="info-item"><span>End Date:</span> {militaryEndDate}</div>
+                              </div>
+                          </lightning-accordion-section>
+                      </lightning-accordion>
+                  </div>
+              </lightning-tab>
+          </lightning-tabset>
+      </div>
+      <lightning-button label="Edit Information" slot="actions" class="slds-align_absolute-center" onclick={handleInfoUpdate}></lightning-button>
+      
+      <template lwc:if={editInfo}>
+        <div class="flow-container">
+          <lightning-flow flow-api-name="UpdateVeteran" onstatuschange={handleFlowStatusChange}></lightning-flow>
+        </div>
+      </template>
+    </div>
+</template>

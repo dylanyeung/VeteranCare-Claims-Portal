@@ -1,0 +1,40 @@
+<template>
+    <div class="claim-card">
+        <!-- Top Section: Icon and Record Type Name -->
+        <div class="icon-container">
+            <lightning-icon icon-name={claimIcon} alternative-text="Claim Icon" size="large"></lightning-icon>
+            <!-- Record type name appears below the icon -->
+            <span class="record-type">{recordTypeName}</span>
+        </div>
+
+        <!-- Dynamic Content Section: Status, Benefit Level, and Upload Button -->
+        <div class="dynamic-content">
+            <template if:true={hasClaim}>
+                <div class="status-card">
+                    <p>Status: <strong>{claim.Current_Status__c}</strong></p>
+                </div>
+                <template if:true={isApproved}>
+                    <div class="benefit-card">
+                        <p>Benefit Level: {claim.Benefit_Level__c}</p>
+                    </div>
+                </template>
+                <template if:true={isOpen}>
+                    <lightning-button stretch label="Upload Documents" class="animated-button" variant="brand-outline"></lightning-button>
+                </template>
+            </template>
+        </div>
+
+        <!-- Button Group Section -->
+        <div class="button-group">
+            <template if:false={hasClaim}>
+                <lightning-button stretch label="Start New Claim" class="animated-button new-claim-button" variant="brand" onclick={handleStartNewClaim}></lightning-button>
+            </template>
+            <template if:true={hasClaim}>
+                <template if:true={isDenied}>
+                    <lightning-button stretch label="Start an Appeal" class="animated-button" variant="destructive" onclick={handleStartAppeal}></lightning-button>
+                    <lightning-button stretch label="Start a New Claim" class="animated-button new-claim-button" variant="brand" onclick={handleStartNewClaim}></lightning-button>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>

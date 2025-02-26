@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_Security_Number__c</fullName>
+    <description>Veteran Social Security Number</description>
+    <inlineHelpText>Please enter your social security number</inlineHelpText>
+    <label>Social Security Number</label>
+    <length>9</length>
+    <maskChar>asterisk</maskChar>
+    <maskType>ssn</maskType>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>EncryptedText</type>
+</CustomField>

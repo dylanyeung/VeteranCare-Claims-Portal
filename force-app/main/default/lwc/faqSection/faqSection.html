@@ -1,0 +1,61 @@
+<template>
+  <div class="faq-container">
+    <h1 class="slds-text-heading_large slds-text-align_center slds-m-bottom_medium">
+      FAQ - Frequently Asked Questions
+    </h1>
+
+    <lightning-accordion class="slds-m-bottom_large custom-accordion" active-section-name="Question1">
+      <lightning-accordion>
+
+        <!-- Claims & Appeals Process -->
+        <lightning-accordion-section name="Question1" label="How do I submit a new claim?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> You can submit a claim by navigating to the 
+            <i><b>Claims Page</b></i> and selecting the appropriate record type. 
+            If your claim is denied, you may be eligible to file an appeal.
+          </p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="Question2" label="What happens if my claim is denied?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> If your claim is denied, you will see a 
+            <i><b>“Start New Appeal”</b></i> button on your <i><b>Claims Page</b></i>. 
+            You can submit an appeal as long as no previous appeal has been created for the same claim.
+          </p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="Question3" label="Can I submit multiple claims?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> Veterans can submit up to <i><b>Five Claims</b></i>, 
+            but only <i><b>one per record type</b></i>. If both a claim and its appeal are denied, 
+            you may submit a new claim for that record type.
+          </p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="Question4" label="Why can’t I submit a claim for a specific record type?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> If you have already started an appeal for a denied claim, 
+            the option to submit a new claim will be disabled for that record type.
+          </p>
+        </lightning-accordion-section>
+
+        <!-- Profile & Account Management -->
+        <lightning-accordion-section name="Question5" label="How do I update my personal information?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> You can update your information on the <i><b>Profile Page</b></i>. 
+            Fields will be editable, except for certain locked fields. The 
+            <i><b>“Save Changes”</b></i> button will only be enabled if you modify any fields.
+          </p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="Question6" label="What should I do if I notice incorrect information on my profile?">
+          <p class="faq-answer">
+            <strong>Answer:</strong> If certain fields are locked and contain incorrect information, 
+            please use the <i><b>Contact Us</b></i> form to notify the support team.
+          </p>
+        </lightning-accordion-section>
+
+      </lightning-accordion>
+    </lightning-accordion>
+  </div>
+</template>

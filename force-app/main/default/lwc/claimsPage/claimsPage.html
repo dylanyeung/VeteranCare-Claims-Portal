@@ -1,0 +1,20 @@
+<template>
+    <div class="claims-container">
+        <template for:each={processedClaims} for:item="item">
+            <div key={item.recordType.apiName} class="grid-item">
+                <c-claim-card 
+                    claim={item.claim} 
+                    record-type={item.recordType}
+                    onlaunchflow={handleLaunchFlow}>
+                </c-claim-card>
+            </div>
+        </template>
+    </div>
+    <template if:true={showFlowModal}>
+        <c-flow-modal 
+            flow-api-name={flowApiName} 
+            flow-claim-type={flowClaimType}
+            onclose={handleFlowModalClose}>
+        </c-flow-modal>
+    </template>
+</template>

@@ -1,0 +1,17 @@
+.faq-container {
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+}
+
+.custom-accordion {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}

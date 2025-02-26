@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefit_Level__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    RecordType.DeveloperName = &quot;Disability_Compensation&quot;,
+    IF(Veteran__r.Disability_Percentage__c * 100 &lt; 10, &quot;No Benefits&quot;,
+        IF(Veteran__r.Disability_Percentage__c * 100 &lt; 30, &quot;Minimal Benefits&quot;,
+            IF(Veteran__r.Disability_Percentage__c * 100 &lt; 50, &quot;Low Benefits&quot;,
+                IF(Veteran__r.Disability_Percentage__c * 100 &lt; 70, &quot;Moderate Benefits&quot;,
+                    IF(Veteran__r.Disability_Percentage__c * 100 &lt; 100, &quot;High Benefits&quot;, &quot;Full Benefits&quot;)
+                )
+            )
+        )
+    ),
+    
+    IF(
+        RecordType.DeveloperName = &quot;Pension&quot;,
+        IF(
+            OR(Veteran_Age__c &gt;= 65, Permanent_Disability__c),
+            IF(Annual_Income__c &lt;= 20000, &quot;Full Pension&quot;,
+                IF(Annual_Income__c &lt;= 30000, &quot;Partial Pension&quot;, &quot;Not Eligible&quot;)),
+            &quot;Not Eligible&quot;
+        ),
+    
+        IF(
+            RecordType.DeveloperName = &quot;Healthcare_Benefits&quot;,
+            CASE(
+                Health_Insurance_Status__c,
+                &quot;Uninsured&quot;, &quot;Full VA Healthcare&quot;,
+                &quot;Medicaid&quot;, &quot;Partial VA Healthcare&quot;,
+                &quot;Other&quot;, &quot;Limited VA Benefits&quot;,
+                &quot;Unknown&quot;
+            ),
+    
+            IF(
+                RecordType.DeveloperName = &quot;Education_and_Training&quot;,
+                IF(
+                    (Veteran__r.Military_Service_End_Date__c - Veteran__r.Military_Service_Start_Date__c) &gt;= 1095,
+                    &quot;Full Tuition Assistance&quot;,
+                    &quot;Partial Tuition Assistance&quot;
+                ),
+    
+                IF(
+                    RecordType.DeveloperName = &quot;Housing_Assistance&quot;,
+                    IF(
+                        AND(
+                            Veteran__r.Disability_Percentage__c &gt;= 50,
+                            Credit_Score_Provided__c = TRUE
+                        ),
+                        &quot;Full Housing Assistance&quot;,
+                        IF(
+                            AND(Credit_Score_Provided__c = TRUE, Annual_Income__c &lt;= 30000),
+                            &quot;Partial Housing Assistance&quot;,
+                            &quot;Not Eligible&quot;
+                        )
+                    ),
+                    &quot;Unknown&quot;
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Benefit Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Assistance</fullName>
+    <active>true</active>
+    <description>Claim requesting housing assistance</description>
+    <label>Housing Assistance</label>
+    <picklistValues>
+        <picklist>Claim_Type__c</picklist>
+        <values>
+            <fullName>Disability Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education and Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pension</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Housing_Status__c</picklist>
+        <values>
+            <fullName>Government Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homeless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Living with Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Own a Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evidence Gathering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Denial_Reason__c</picklist>
+        <values>
+            <fullName>Insufficient Evidence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Condition Doesn%E2%80%99t Meet VA Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Deadlines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Service-Connected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paperwork Errors</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disability_Status__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending VA Determination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Health_Insurance_Status__c</picklist>
+        <values>
+            <fullName>Insured</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uninsured</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Education_or_Training__c</picklist>
+        <values>
+            <fullName>Certification Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocational Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

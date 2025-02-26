@@ -1,0 +1,44 @@
+.claims-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+
+/* For the 4th and 5th grid items (bottom row), reassign columns so they are centered */
+.grid-item:nth-child(4) {
+    grid-column: 3;
+}
+.grid-item:nth-child(5) {
+    grid-column: 4;
+}
+
+/* For medium screens, switch to 2 columns (cards stack in 3 rows) */
+@media (max-width: 1200px) {
+    .claims-container {
+        grid-template-columns: 1fr 300px 300px 1fr;
+    }
+    /* Let grid auto-place items */
+    .grid-item:nth-child(4),
+    .grid-item:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+/* For small screens, use a single column */
+@media (max-width: 600px) {
+    .claims-container {
+        grid-template-columns: 1fr 300px 1fr;
+    }
+    .grid-item {
+        grid-column: 2;
+    }
+}
+
+/* Center each grid item */
+.grid-item {
+    display: flex;
+    justify-content: center;
+}
