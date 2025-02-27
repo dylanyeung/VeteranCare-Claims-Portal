@@ -1,0 +1,50 @@
+.footer {
+  background-color: #1a1a68;
+  color: #fff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-link:hover {
+  color: #ffcf71;
+}
+
+.footer-motto p {
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  text-align: right;
+}
