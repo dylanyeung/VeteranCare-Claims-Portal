@@ -1,4 +1,4 @@
 <aura:application>
 
-<c:footer></c:footer>
+<c:claimsHeader></c:claimsHeader>
 </aura:application>
