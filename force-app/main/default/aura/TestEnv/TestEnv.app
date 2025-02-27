@@ -1,4 +1,4 @@
-<aura:application>
+<aura:application  extends="force:slds">
 
-<c:claimsHeader></c:claimsHeader>
+<c:profileHeader></c:profileHeader>
 </aura:application>

@@ -1,11 +1,8 @@
-<!-- <template>
-    <div>Hello World</div>
-    <h1>{userName}</h1>
-    <h1>{userRoleName}</h1>
-    <h1>{userProfileName}</h1>
-</template> -->
 
 <template>
+    <template lwc:if={editInfo}>
+        <div class="overlay"></div>
+    </template>
   <div class="profile-container">
       <div class="profile-card">
           <lightning-tabset variant="scoped">
