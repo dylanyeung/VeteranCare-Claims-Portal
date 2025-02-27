@@ -7,52 +7,57 @@
       <lightning-carousel>
         <lightning-carousel-image
           class="carousel-image"
+          key={flag1}
           src={flag1}
           header="VA.gov (U.S. Department of Veterans Affairs)"
           description="Provides healthcare, benefits, education assistance, housing support, and other essential services for veterans."
           alternative-text="Picture of the American Flag"
-          href="https://www.va.gov"
-          target="_blank">
+          data-url="https://www.va.gov"
+           onclick={openNewTab}>
         </lightning-carousel-image>
 
         <lightning-carousel-image
           class="carousel-image"
           src={flag2}
+          key={flag2}
           header="Veterans Crisis Line"
           description="Helps veterans access benefits, find employment opportunities, and connect with supportive communities."
           alternative-text="Picture of the American Flag Statue of Liberty"
-          href="https://www.veteranscrisisline.net"
-          target="_blank">
+          data-url="https://www.veteranscrisisline.net"
+          onclick={openNewTab}>
         </lightning-carousel-image>
 
         <lightning-carousel-image
           class="carousel-image"
           src={flag3}
+          key={flag3}
           header="National Resource Directory (NRD)"
           description="A directory of resources for veterans, service members, and their families, covering healthcare, housing, and employment."
           alternative-text="Picture of the American Flag"
-          href="https://nrd.gov"
-          target="_blank">
+          data-url="https://nrd.gov"
+           onclick={openNewTab}>
         </lightning-carousel-image>
 
         <lightning-carousel-image
           class="carousel-image"
           src={flag4}
+          key={flag4}
           header="Disabled American Veterans (DAV)"
           description="Helps veterans access benefits, find employment opportunities, and connect with supportive communities."
           alternative-text="Picture of the American Flag"
-          href="https://www.dav.org"
-          target="_blank">
+          data-url="https://www.dav.org"
+          onclick={openNewTab}>
         </lightning-carousel-image>
 
         <lightning-carousel-image
           class="carousel-image"
           src={flag5}
+          key={flag5}
           header="Veterans Employment and Training Service (VETS)"
           description="Helps veterans transition to civilian careers with employment assistance and training programs."
           alternative-text="Picture of the American Flag"
-          href="https://www.dol.gov/agencies/vets"
-          target="_blank">
+          data-url="https://www.dol.gov/agencies/vets"
+          onclick={openNewTab}>
         </lightning-carousel-image>
       </lightning-carousel>
     </div>

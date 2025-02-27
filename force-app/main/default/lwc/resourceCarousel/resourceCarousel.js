@@ -12,5 +12,12 @@ export default class ResourceCarousel extends LightningElement {
   flag3 = FLAG_IMAGE3;
   flag4 = FLAG_IMAGE4;
   flag5 = FLAG_IMAGE5;
+
+  openNewTab(event) {
+    const url = event.target.dataset.url;
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
     
 }
