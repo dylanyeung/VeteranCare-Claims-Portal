@@ -1,4 +1,4 @@
 <aura:application>
 
-<c:homePage></c:homePage>
+<c:resourceCarousel></c:resourceCarousel>
 </aura:application>
