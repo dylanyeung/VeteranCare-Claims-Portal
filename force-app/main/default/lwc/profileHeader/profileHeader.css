@@ -5,16 +5,22 @@
   padding: 2rem;
   max-width: 850px;
   margin: auto;
+  animation: profileGrow 1s ease-in-out;
 }
 
-/* Profile Card with Soft Background & Glow */
 .profile-card {
   background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(40, 40, 40, 0.95));
-  color: #f5f5f5;
+  color: #ededed;
   padding: 1.8rem;
   border-radius: 16px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
+  animation: profileGrow 1s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .profile-picture {
@@ -23,45 +29,66 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 3px solid white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffcf71;
+  animation: profileImageGrow 1s ease-in-out;
 }
 
-/* Header Card Specific Styling */
 .header-card {
-  background: linear-gradient(135deg, #292929, #3b3b3b);
+  background: linear-gradient(100deg, #010038, #A50F2B);
+  animation: profileGrow 1s ease-in-out;
 }
 
-/* Profile Header */
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .profile-info {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 .profile-name {
   font-size: 1.9rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: #f8c74f;
+  color: #ffcf71;
+  animation: profileGrow 1s ease-in-out;
 }
 
 .profile-branch {
   font-size: 1.4rem;
-  color: #cfcfcf;
-  margin-bottom: 1rem;
+  color: #ededed;
+  animation: profileGrow 1s ease-in-out;
 }
 
-/* Badge Styling */
 .status-badge {
   font-size: 1rem;
-  --slds-c-badge-color-background: #28a745;
-  --slds-c-badge-text-color: white;
+  background-color: #010038;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  animation: profileGrow 1s ease-in-out;
+}
+
+@keyframes profileGrow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes profileImageGrow {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

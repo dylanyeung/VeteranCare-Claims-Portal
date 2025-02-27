@@ -1,4 +1,4 @@
 <aura:application  extends="force:slds">
 
-<c:footer></c:footer>
+<c:profileHeader></c:profileHeader>
 </aura:application>
