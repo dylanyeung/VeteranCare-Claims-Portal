@@ -1,4 +1,4 @@
-<aura:application>
+<aura:application  extends="force:slds">
 
-<c:resourceCarousel></c:resourceCarousel>
+<c:footer></c:footer>
 </aura:application>
