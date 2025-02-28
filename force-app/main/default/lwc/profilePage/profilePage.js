@@ -70,9 +70,10 @@ export default class ProfilePage extends LightningElement {
 
   handleFlowStatusChange(event) {
     if (event.detail.status === "FINISHED") {
-        console.log("Flow has completed!");
-        this.editInfo = false;
-        refreshApex(this.wiredResult);
+      console.log("Flow has completed!");
+      this.editInfo = false;
+      refreshApex(this.wiredResult);
+      window.location.reload();
     }
 }
 }
