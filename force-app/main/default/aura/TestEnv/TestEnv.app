@@ -1,4 +1,4 @@
 <aura:application  extends="force:slds">
 
-<c:profilePage></c:profilePage>
+<c:companyLogo></c:companyLogo>
 </aura:application>

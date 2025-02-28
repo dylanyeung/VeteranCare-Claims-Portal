@@ -1,0 +1,35 @@
+.pledge-container {
+  background: linear-gradient(135deg, rgba(1, 0, 56, 0.66), rgba(1, 0, 56, 0.76));
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
+  width: 100%;
+  margin: 2rem auto;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.pledge-wrapper {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  animation: slideText 30s linear infinite;
+}
+
+.pledge-text {
+  font-size: 1.2rem;
+  color: #f8c74f;
+  font-weight: normal;
+  margin-right: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes slideText {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
