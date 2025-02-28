@@ -1,16 +1,12 @@
 import { LightningElement, wire } from 'lwc';
-import { getRecord } from 'lightning/uiRecordApi';
 import Id from '@salesforce/user/Id';
 import { refreshApex } from '@salesforce/apex';
-
 import getVeteranInfo from '@salesforce/apex/getVeteranRecord.getVeteranInfo';
 import { MessageContext, publish } from 'lightning/messageService';
 import VETERAN_SEARCH_CHANNEL from '@salesforce/messageChannel/VeteranSearch__c';
 
 export default class ProfilePage extends LightningElement {
 
-  userId = Id;
-  // userId = '0054U00000IEvZiQAL'; // Aaron
   userName;
   email;
   phone;
@@ -27,21 +23,10 @@ export default class ProfilePage extends LightningElement {
   wiredResult;
 
   @wire(MessageContext)
-    messageContext;                                     // wiring in Lightning Message Service
+    messageContext;
 
 
-  // @wire(getRecord, { recordId: Id, fields: [Name, RoleName, ProfileName] })
-  // userDetails({ error, data }) {
-  //   if (error) {
-  //     this.error = error;
-  //   } else if (data) {
-  //     // if (data.fields.Name.value != null) {
-  //     //   this.userName = data.fields.Name.value;
-  //     // }
-  //   }
-  // }
-
-  @wire(getVeteranInfo, {userId: '$userId'})
+  @wire(getVeteranInfo, {userId: Id})
   veteranDetails(results) {
     this.wiredResult = results;
     if(results.data) {
@@ -85,11 +70,10 @@ export default class ProfilePage extends LightningElement {
 
   handleFlowStatusChange(event) {
     if (event.detail.status === "FINISHED") {
-        console.log("Flow has completed!");
-        this.editInfo = false;
-        refreshApex(this.wiredResult);
-        // Perform any post-flow actions here
-        // this.dispatchEvent(new CustomEvent('flowfinished'));
+      console.log("Flow has completed!");
+      this.editInfo = false;
+      refreshApex(this.wiredResult);
+      window.location.reload();
     }
 }
 }
