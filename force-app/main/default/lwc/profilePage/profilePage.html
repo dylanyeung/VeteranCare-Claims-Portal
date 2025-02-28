@@ -8,7 +8,7 @@
           <lightning-tabset variant="scoped">
               <lightning-tab label="Personal Info">
                   <div class="tab-content">
-                      <lightning-accordion allow-multiple-sections-open>
+                      <lightning-accordion allow-multiple-sections-open active-section-name="basicInfo">
                           <lightning-accordion-section name="basicInfo" label="Basic Details">
                               <div class="info-grid">
                                   <div class="info-item"><span>Email:</span> {email}</div>
@@ -24,7 +24,7 @@
 
               <lightning-tab label="Military Info">
                   <div class="tab-content">
-                      <lightning-accordion allow-multiple-sections-open>
+                      <lightning-accordion allow-multiple-sections-open active-section-name="militaryInfo">
                           <lightning-accordion-section name="militaryInfo" label="Military Service">
                               <div class="info-grid">
                                   <div class="info-item"><span>Branch:</span> {militaryBranch}</div>
