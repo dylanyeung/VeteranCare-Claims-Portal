@@ -12,9 +12,9 @@
                           <lightning-accordion-section name="basicInfo" label="Basic Details">
                               <div class="info-grid">
                                   <div class="info-item"><span>Email:</span> {email}</div>
-                                  <div class="info-item"><span>Phone:</span> {phone}</div>
+                                  <div class="info-item"><span>Phone:</span> {formattedPhoneNumber}</div>
                                   <div class="info-item"><span>DOB:</span> {dob}</div>
-                                  <div class="info-item"><span>SSN:</span> {ssn}</div>
+                                  <div class="info-item"><span>SSN:</span> {maskedSSN}</div>
                                   <div class="info-item"><span>Credit Score:</span> {creditScore}</div>
                               </div>
                           </lightning-accordion-section>
@@ -28,7 +28,7 @@
                           <lightning-accordion-section name="militaryInfo" label="Military Service">
                               <div class="info-grid">
                                   <div class="info-item"><span>Branch:</span> {militaryBranch}</div>
-                                  <div class="info-item"><span>Discharge Percentage:</span> {disabilityPercentage}</div>
+                                  <div class="info-item"><span>Discharge Percentage:</span> {disabilityPercentage}%</div>
                                   <div class="info-item"><span>Start Date:</span> {militaryStartDate}</div>
                                   <div class="info-item"><span>End Date:</span> {militaryEndDate}</div>
                               </div>
