@@ -2,17 +2,70 @@
   max-width: 750px;
   margin: auto;
   padding: 20px;
-  height: 100vh;
+  border-radius: 12px;
 }
 
 .custom-accordion {
-  background: #f8f8f8;
-  padding: 15px;
+  background: white;
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slds-text-heading_large {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d71e28;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.slds-text-align_center {
+  text-align: center;
+}
+
+.slds-m-bottom_medium {
+  margin-bottom: 1rem;
+}
+
+.slds-m-bottom_large {
+  margin-bottom: 1.5rem;
 }
 
 .faq-answer {
   font-size: 1rem;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.faq-answer strong {
+  color: #003366;
+}
+
+.faq-answer b {
+  color: #003366;
+}
+
+/* Accordion Section Styling */
+.lightning-accordion-section {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.lightning-accordion-section label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+.lightning-accordion-section:hover {
+  background-color: #f1f1f1;
+}
+
+.lightning-accordion-section[aria-expanded="true"] {
+  background-color: #e1eaff;
+}
+
+.lightning-accordion-section button {
+  color: #003366;
 }
