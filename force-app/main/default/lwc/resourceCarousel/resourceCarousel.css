@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: #001f3f;
-  border-radius: 8px;
-  width: 80%;
+  background: #003366;
+  border-radius: 12px;
+  /* width: 80%; */
   margin: 0 auto;
 }
 
@@ -26,6 +26,23 @@
 
 .carousel-subtitle {
   font-size: 1rem;
-  color: #004b87;
+  color: #003366;
   margin-bottom: 1.5rem;
+}
+
+.carousel-image {
+  border-radius: 8px;
+}
+
+.carousel-image a {
+  text-decoration: none;
+}
+
+.carousel-image header {
+  color: #003366;
+  font-weight: bold;
+}
+
+.carousel-image description {
+  color: #333333;
 }

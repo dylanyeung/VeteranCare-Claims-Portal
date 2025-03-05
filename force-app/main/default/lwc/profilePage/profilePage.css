@@ -70,17 +70,6 @@
   z-index: 1000;
 }
 
-@keyframes profileGrow {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .overlay {
   position: absolute;
   top: 0;

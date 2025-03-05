@@ -1,12 +1,12 @@
 .footer {
-  background-color: #003366; /* Dark blue for consistency */
+  background-color: #003366;
   color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease; /* Subtle background transition */
+  transition: background-color 0.3s ease;
 }
 
 .footer-container {
@@ -20,11 +20,11 @@
 .footer-logo img {
   height: 50px;
   width: auto;
-  transition: transform 0.3s ease; /* Logo zoom effect */
+  transition: transform 0.3s ease;
 }
 
 .footer-logo img:hover {
-  transform: scale(1.1); /* Subtle zoom-in effect on hover */
+  transform: scale(1.1);
 }
 
 .footer-links {
@@ -37,11 +37,11 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  transition: color 0.3s ease; /* Smooth transition for hover */
+  transition: color 0.3s ease; 
 }
 
 .footer-link:hover {
-  color: #ffcf71; /* Highlighted yellow/gold on hover */
+  color: #ffcf71;
 }
 
 .footer-motto p {
@@ -59,5 +59,5 @@
 }
 
 .footer-copyright:hover {
-  opacity: 1; /* Subtle opacity change on hover */
+  opacity: 1;
 }
