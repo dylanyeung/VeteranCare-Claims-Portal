@@ -1,4 +1,4 @@
-import { LightningElement, wire } from 'lwc';
+import { LightningElement, wire, track } from 'lwc';
 import Id from '@salesforce/user/Id';
 import { refreshApex } from '@salesforce/apex';
 import getVeteranInfo from '@salesforce/apex/getVeteranRecord.getVeteranInfo';
@@ -18,6 +18,10 @@ export default class ProfilePage extends LightningElement {
   disabilityPercentage;
   creditScore;
   ssn;
+
+  @track formattedPhoneNumber = '';
+  @track maskedSSN = '';
+
 
   editInfo = false;
   wiredResult;
@@ -44,7 +48,9 @@ export default class ProfilePage extends LightningElement {
 
       this.disabilityPercentage = results.data.Disability_Percentage__c;
       this.ssn = results.data.Social_Security_Number__c;
-      this.count = this.count + 1;
+
+      this.formattedPhoneNumber = this.formatPhoneNumber(this.phone);
+      this.maskedSSN = this.maskSSN(this.ssn);
 
       const payload = {
         name: this.userName,
@@ -75,5 +81,22 @@ export default class ProfilePage extends LightningElement {
       refreshApex(this.wiredResult);
       window.location.reload();
     }
-}
+  }
+
+  // Formatting field functions to display
+  formatPhoneNumber(number) {
+    if (!number) return '';
+    const cleaned = number.toString().replace(/\D/g, ''); // convert to string, remove non-numeric characters
+    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+    return match ? `(${match[1]}) ${match[2]}-${match[3]}` : number;
+  }
+
+  maskSSN(ssn) {
+    if (!ssn) return '';
+    const cleaned = ssn.toString().replace(/\D/g, '');
+    if (cleaned.length === 9) {
+        return `XXX-XX-${cleaned.slice(-4)}`;
+    }
+    return ssn;
+  }
 }
