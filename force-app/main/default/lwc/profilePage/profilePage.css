@@ -55,6 +55,40 @@
   color: #1A5276;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.button {
+  background-color: #003366;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #001f4d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
 
 .flow-container {
   background: #1A5276;

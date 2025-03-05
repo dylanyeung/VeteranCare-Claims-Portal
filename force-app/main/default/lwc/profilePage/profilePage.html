@@ -27,9 +27,9 @@
         </div>
     </div>
     
-    
-    <lightning-button label="Edit Information" class="slds-align_absolute-center" onclick={handleInfoUpdate}></lightning-button>
-    
+    <div class="button-container">
+        <button class="button" onclick={handleInfoUpdate}>Edit Profile</button>
+    </div>
     <template lwc:if={editInfo}>
         <div class="flow-container">
             <lightning-flow flow-api-name="UpdateVeteran" onstatuschange={handleFlowStatusChange}></lightning-flow>
