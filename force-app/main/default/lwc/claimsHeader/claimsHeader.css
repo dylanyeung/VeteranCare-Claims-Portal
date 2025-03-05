@@ -1,9 +1,13 @@
 .claims-header {
-  background-color: #1a1a68;
+  background-color: #003366;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
+  width: 90%;
+  margin: auto;
   font-family: 'Arial', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -20,7 +24,6 @@
 
 .header-subtitle {
   font-size: 18px;
-  font-style: italic;
   margin-top: 10px;
   color: #ffcf71;
 }

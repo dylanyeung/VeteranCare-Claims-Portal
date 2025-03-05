@@ -1,3 +1,4 @@
+
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -9,18 +10,17 @@
 }
 
 .profile-card {
-  background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(40, 40, 40, 0.95));
-  color: #ededed;
-  padding: 1.8rem;
-  border-radius: 16px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: profileGrow 1s ease-in-out;
 }
 
 .profile-card:hover {
   transform: scale(1.01);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .profile-picture {
@@ -34,8 +34,13 @@
 }
 
 .header-card {
-  background: linear-gradient(100deg, #010038, #A50F2B);
-  animation: profileGrow 1s ease-in-out;
+  background-color: #003366;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-header {
@@ -46,8 +51,8 @@
 
 .profile-info {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-around;
+  width: 90%;
   align-items: center;
 }
 
@@ -60,19 +65,21 @@
 
 .profile-branch {
   font-size: 1.4rem;
-  color: #ededed;
+  color: #fff;
   animation: profileGrow 1s ease-in-out;
 }
 
 .status-badge {
   font-size: 1rem;
-  background-color: #010038;
-  color: white;
+  background-color: #f7f7f7;
+  color: #333;
   padding: 5px 10px;
   border-radius: 8px;
+  font-weight: bold;
   animation: profileGrow 1s ease-in-out;
 }
 
+/* Animations */
 @keyframes profileGrow {
   0% {
     transform: scale(0.9);
